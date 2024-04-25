@@ -29,7 +29,7 @@ const ParkHere = () => {
     const fetchPlace = async () => {
       setLoading(true);
 
-      const response = await fetch(`https://parklane-24dk-default-rtdb.firebaseio.com/places.json?auth=${token}`);
+      const response = await fetch(`https://smartpark-e7ad5-default-rtdb.firebaseio.com/places.json?auth=${token}`);
       if (!response.ok) {
         throw new Error('Something went wrong!');
       }
@@ -70,7 +70,7 @@ const ParkHere = () => {
     setTicketId(userData.id);
 
     setIsSubmitting(true);
-    await fetch(`https://parklane-24dk-default-rtdb.firebaseio.com/bookings/${mailId}.json?auth=${token}`, {
+    await fetch(`https://smartpark-e7ad5.firebaseio.com/bookings/${mailId}.json?auth=${token}`, {
       method: 'POST',
       body: JSON.stringify({
         user: data

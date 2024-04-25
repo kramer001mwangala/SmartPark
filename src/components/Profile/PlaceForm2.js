@@ -128,7 +128,7 @@ const PlaceForm2 = (props) => {
 	const timeSlotControlClasses = `${classes.field} ${formInputsValidity.timeSlot ? '' : classes.invalid}`;
 	const outputControlClasses = `${classes.output} ${isConfirmed ? classes.op : ''}`;
 
-	const op = (isConfirmed ? `$${amount}` : 'Net amount');	
+	const op = (isConfirmed ? `ksh ${amount}` : 'Net amount');	
 
 	return (
 		<section className = {classes.section}>

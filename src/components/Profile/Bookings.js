@@ -22,7 +22,7 @@ const Bookings = () => {
 
 	useEffect(() => {
 		const fetchBookings = async () => {		
-			const response = await fetch(`https://parklane-24dk-default-rtdb.firebaseio.com/bookings/${mailId}.json?auth=${token}`);
+			const response = await fetch(`https://smartpark-e7ad5.firebaseio.com/bookings/${mailId}.json?auth=${token}`);
 
 			if (!response.ok) {
 				throw new Error('Something went wrong!');
